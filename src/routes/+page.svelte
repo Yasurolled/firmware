@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	const VERSION = '1.13';
+	const VERSION = '1.14';
 
 	import Card from '$lib/components/Card.svelte';
 	import News from '$lib/components/News.svelte';
@@ -15,6 +15,7 @@
 	let activeIndex = $state(0);
 	let slides = [
 		`${base}/img/bruce-pcb.png`,
+		`${base}/img/reaper-pcb2.png`,
 		`${base}/img/cardputer.png`,
 		`${base}/img/core2.png`,
 		`${base}/img/cyd.png`,
@@ -133,10 +134,10 @@
 				</p>
 				<Btn href="https://github.com/BruceDevices/firmware/releases/tag/{VERSION}">Read Changelog</Btn>
 			</News>
-			<News title="Bruce PCB">
+			<News title="Bruce RF Reaper">
 				<p class="mb-4 text-[1.2rem]">Open Source Bruce PCB, fully compatible with Bruce</p>
 				<Btn href="https://github.com/BruceDevices/firmware/tree/main/pcbs">Download</Btn>
-				<Btn href="https://www.pcbway.com/project/shareproject/Bruce_PCB_Smoochiee_d6a0284b.html" outline className="max-sm:mt-2">Buy</Btn>
+				<Btn href="https://www.elecrow.com/bruce-pcb-rf-reaper.html" outline className="max-sm:mt-2">Buy</Btn>
 			</News>
 		</div>
 	</div>

@@ -4,6 +4,7 @@
 	import Btn from '$lib/components/Btn.svelte';
 
 	const boardImages = ['/img/bruce-pcb.png', '/img/bruce-pcb2.png'];
+	const reaperImages = ['/img/reaper-pcb.png', '/img/reaper-pcb2.png'];
 </script>
 
 <!-- Hero Section -->
@@ -14,6 +15,83 @@
 		<p class="mb-7 text-xl">Official and community hardware designed for Bruce firmware</p>
 	</div>
 </section>
+
+
+<div class="min-h-screen p-8 text-white">
+        <BoardCard
+                images={reaperImages}
+                title="Bruce RF Reaper PCB"
+                description="The Bruce RF Reaper is a versatile and powerful development board designed specifically for RF exploration and IoT projects. Created by Smoochiee, this board combines multiple wireless technologies with extensive GPIO capabilities, making it perfect for both beginners or hobbists that want to learn more and advanced users interested in RF and IoT development."
+        >
+                <!-- Rest of your content stays exactly the same -->
+                <!-- Technical Specifications -->
+                <div class="mb-8">
+                        <h3 class="mb-6 text-2xl font-bold text-white">Technical Specifications</h3>
+                        <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+                                <div class="rounded-lg border border-white/10 bg-white/5 p-4">
+                                        <span class="mb-2 block text-sm font-bold tracking-wide text-purple-400 uppercase">Main MCU</span>
+                                        <span class="text-gray-300">ESP32-S3 N16R8</span>
+                                </div>
+                                <div class="rounded-lg border border-white/10 bg-white/5 p-4">
+                                        <span class="mb-2 block text-sm font-bold tracking-wide text-purple-400 uppercase">Input/Output</span>
+                                        <span class="text-gray-300">6-way button matrix</span>
+                                </div>
+                                <div class="rounded-lg border border-white/10 bg-white/5 p-4">
+                                        <span class="mb-2 block text-sm font-bold tracking-wide text-purple-400 uppercase">IO Expander</span>
+                                        <span class="text-gray-300">AW9523</span>
+                                </div>
+                                <div class="rounded-lg border border-white/10 bg-white/5 p-4">
+                                        <span class="mb-2 block text-sm font-bold tracking-wide text-purple-400 uppercase">RF Modules</span>
+                                        <span class="text-gray-300">E01-2G4M27SX (nRF24), E07-433M20S (CC1101)</span>
+                                </div>
+                                <div class="rounded-lg border border-white/10 bg-white/5 p-4">
+                                        <span class="mb-2 block text-sm font-bold tracking-wide text-purple-400 uppercase">NFC Reader/Writer/Emulator</span>
+                                        <span class="text-gray-300">ST25R3916</span>
+                                </div>
+                                <div class="rounded-lg border border-white/10 bg-white/5 p-4">
+                                        <span class="mb-2 block text-sm font-bold tracking-wide text-purple-400 uppercase">Peripherals</span>
+                                        <span class="text-gray-300">Vibro motor, Buzzer, IR TX/RX, iButton</span>
+                                </div>
+                                <div class="rounded-lg border border-white/10 bg-white/5 p-4">
+                                        <span class="mb-2 block text-sm font-bold tracking-wide text-purple-400 uppercase">Storage</span>
+                                        <span class="text-gray-300">microSD card</span>
+                                </div>
+                                <div class="rounded-lg border border-white/10 bg-white/5 p-4">
+                                        <span class="mb-2 block text-sm font-bold tracking-wide text-purple-400 uppercase">GPS Module</span>
+                                        <span class="text-gray-300">ATGM336H</span>
+                                </div>
+                                <div class="rounded-lg border border-white/10 bg-white/5 p-4">
+                                        <span class="mb-2 block text-sm font-bold tracking-wide text-purple-400 uppercase">Compatibility</span>
+                                        <span class="text-gray-300">Flipper Zero header</span>
+                                </div>
+                                <div class="rounded-lg border border-white/10 bg-white/5 p-4">
+                                        <span class="mb-2 block text-sm font-bold tracking-wide text-purple-400 uppercase">Connectivity</span>
+                                        <span class="text-gray-300">Multiple UART & I2C</span>
+                                </div>
+                                <div class="rounded-lg border border-white/10 bg-white/5 p-4">
+                                        <span class="mb-2 block text-sm font-bold tracking-wide text-purple-400 uppercase">Visual</span>
+                                        <span class="text-gray-300">Status LEDs</span>
+                                </div>
+                        </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="flex flex-wrap justify-center gap-4 pt-8">
+                        <a href="https://github.com/BruceDevices/firmware/tree/main/pcbs/Bruce_PCB_smoochie/3d" class="min-w-48 rounded-md border border-white/20 bg-white/10 px-6 py-3 text-center font-bold text-white transition-all duration-300 hover:bg-white/20">
+                                Download 3D case model
+                        </a>
+                        <a href="https://www.pcbway.com/project/shareproject/Bruce_RF_Reaper_PCB_5e0e8a73.html" class="min-w-48 rounded-md bg-purple-600 px-6 py-3 text-center font-bold text-white transition-all duration-300 hover:bg-purple-500">
+                                <b class="text-white">Order with PCBWay</b>
+                        </a>
+                        <a href="https://www.elecrow.com/bruce-pcb-rf-reaper.html" class="min-w-48 rounded-md bg-purple-600 px-6 py-3 text-center font-bold text-white transition-all duration-300 hover:bg-purple-500">
+                                <b class="text-white">Order with Elecrow</b>
+                        </a>
+                </div>
+        </BoardCard>
+</div>
+
+
+
 
 <div class="min-h-screen p-8 text-white">
 	<BoardCard
